@@ -59,6 +59,8 @@ public abstract class View implements Initializable, EventTarget {
 
     public View() {
         try {
+            // Usage of GetResource in new View() may be unsafe if class is extended
+            // 在这里就是为了从子类获取资源路径，所以是安全的
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml()));
             loader.setController(this);
             root = loader.load();
