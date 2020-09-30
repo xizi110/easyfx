@@ -96,13 +96,15 @@ public abstract class View implements Initializable, EventTarget {
         CompletableFuture.runAsync(() -> {
             for (View view : views) {
                 Class<? extends View> viewClass = view.getClass();
-                Method[] methods = viewClass.getMethods();
+                Method[] methods = viewClass.getDeclaredMethods();
                 for (Method method : methods) {
                     Receiver annotation = method.getAnnotation(Receiver.class);
                     if (annotation != null && annotation.name().equals(receiverName)) {
                         // 接收者方法运行在JavaFX Application Thread
                         Platform.runLater(() -> {
                             try {
+                                // 方法修饰符 public or private 都行
+                                method.setAccessible(true);
                                 method.invoke(view, data);
                             } catch (IllegalAccessException | InvocationTargetException e) {
                                 e.printStackTrace();
