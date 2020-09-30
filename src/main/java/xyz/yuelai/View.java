@@ -1,5 +1,6 @@
 package xyz.yuelai;
 
+import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.event.EventDispatchChain;
 import javafx.event.EventTarget;
@@ -99,11 +100,14 @@ public abstract class View implements Initializable, EventTarget {
                 for (Method method : methods) {
                     Receiver annotation = method.getAnnotation(Receiver.class);
                     if (annotation != null && annotation.name().equals(receiverName)) {
-                        try {
-                            method.invoke(view, data);
-                        } catch (IllegalAccessException | InvocationTargetException e) {
-                            e.printStackTrace();
-                        }
+                        // 接收者方法运行在JavaFX Application Thread
+                        Platform.runLater(() -> {
+                            try {
+                                method.invoke(view, data);
+                            } catch (IllegalAccessException | InvocationTargetException e) {
+                                e.printStackTrace();
+                            }
+                        });
                     }
                 }
             }
