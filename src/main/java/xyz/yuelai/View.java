@@ -1,17 +1,24 @@
 package xyz.yuelai;
 
 import javafx.application.Platform;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.concurrent.Task;
 import javafx.event.EventDispatchChain;
 import javafx.event.EventTarget;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import xyz.yuelai.control.Notification;
 
 import java.io.IOException;
 import java.lang.reflect.Constructor;
@@ -24,7 +31,7 @@ import java.util.concurrent.CompletableFuture;
 /**
  * @author zhong
  * @date 2020-09-15 17:48:09 周二
- *
+ * <p>
  * 所有 view 的父类。创建 view 对象需要用 {@link #createView(Class)} 方法创建，
  * 否则使用 new ViewImpl() 创建的 view 对象，不能被 View 管理
  */
@@ -36,19 +43,7 @@ public abstract class View implements Initializable, EventTarget {
      */
     private Parent root;
 
-    /**
-     * 当前视图的窗体，未显示窗体时为null
-     */
-    private Window window;
-    /**
-     * 当前窗体场景中包含的 view
-     */
-    private static Map<Scene, List<View>> sceneViewMap = new HashMap<>();
-
-    /**
-     * 当前系统中激活的 view
-     */
-    private static List<View> views = new LinkedList<>();
+    private ObjectProperty<Scene> scene = new SimpleObjectProperty<>();
 
     /**
      * 构造器之前初始化
@@ -64,56 +59,48 @@ public abstract class View implements Initializable, EventTarget {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml()));
             loader.setController(this);
             root = loader.load();
-            root.sceneProperty().addListener((observable, oldValue, newValue) -> {
+            scene.bind(root.sceneProperty());
+            scene.addListener((observable, oldValue, newValue) -> {
                 if (newValue != null) {
-                    List<View> views = sceneViewMap.computeIfAbsent(newValue, k -> new LinkedList<>());
-                    views.add(this);
                     newValue.windowProperty().addListener((observable1, oldValue1, newValue1) -> {
-                        window = newValue1;
-                        if (window != null) {
-                            window.setOnHidden(event -> {
-                                // 窗体隐藏之后，移除对应的 view
-                                View.views.removeAll(sceneViewMap.get(window.getScene()));
-                                sceneViewMap.remove(window.getScene());
-                                onWindowHidden();
-                            });
-                            window.setOnShowing(event -> onWindowShowing());
+                        if (newValue1 != null) {
+                            newValue1.setOnHidden(event -> onWindowHidden());
+                            newValue1.setOnShowing(event -> onWindowShowing());
                         }
                     });
                 }
-
             });
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    private static Map<String, List<ViewReceiverMethodInfo>> receiverMethods = new HashMap<>();
+
     /**
-     * 异步发送消息给其他激活中的 View ，其他 View 类中被 @Receiver 注解注释的方法且 name 为指定 receiverName 的方法，将被调用
+     * 异步发送消息给其他激活中的 View ，其他 View 类中被 @Receiver
+     * 注解注释的方法且 name 为指定 receiverName 的方法，将被调用
      *
      * @param receiverName 接受者的名字
      * @param data         接收者方法参数
      */
-    public void sendMessageWithAsync(String receiverName, Object... data) {
+    protected void sendMessageWithAsync(String receiverName, Object... data) {
         CompletableFuture.runAsync(() -> {
-            for (View view : views) {
-                Class<? extends View> viewClass = view.getClass();
-                Method[] methods = viewClass.getDeclaredMethods();
-                for (Method method : methods) {
-                    Receiver annotation = method.getAnnotation(Receiver.class);
-                    if (annotation != null && annotation.name().equals(receiverName)) {
-                        // 接收者方法运行在JavaFX Application Thread
-                        Platform.runLater(() -> {
-                            try {
-                                // 方法修饰符 public or private 都行
-                                method.setAccessible(true);
-                                method.invoke(view, data);
-                            } catch (IllegalAccessException | InvocationTargetException e) {
-                                e.printStackTrace();
-                            }
-                        });
-                    }
+            List<ViewReceiverMethodInfo> viewReceiverMethodInfos = receiverMethods.get(receiverName);
+            for (ViewReceiverMethodInfo info : viewReceiverMethodInfos) {
+                Method method = info.getMethod();
+                View view = info.getView();
+                if (!(info.isWhenHidden() || view.getWindow().isShowing())) {
+                    continue;
                 }
+                method.setAccessible(true);
+                Platform.runLater(() -> {
+                    try {
+                        method.invoke(view, data);
+                    } catch (IllegalAccessException | InvocationTargetException e) {
+                        e.printStackTrace();
+                    }
+                });
             }
         });
     }
@@ -123,20 +110,24 @@ public abstract class View implements Initializable, EventTarget {
      *
      * @return 当前视图的窗体
      */
-    public Window getWindow() {
-        return window;
+    protected Window getWindow() {
+        Scene scene = this.scene.get();
+        if (scene == null) {
+            return null;
+        }
+        return scene.getWindow();
     }
 
     /**
      * 在窗口显示之前调用，子类可以覆盖实现
      */
-    public void onWindowShowing() {
+    protected void onWindowShowing() {
     }
 
     /**
      * 在窗口关闭之后调用，子类可以覆盖实现
      */
-    public void onWindowHidden() {
+    protected void onWindowHidden() {
     }
 
     /**
@@ -154,7 +145,25 @@ public abstract class View implements Initializable, EventTarget {
         try {
             Constructor<T> constructor = viewClass.getConstructor();
             T instance = constructor.newInstance();
-            views.add(instance);
+
+            // 异步处理 Receiver 注解注释的方法
+            CompletableFuture.runAsync(() -> {
+                Method[] declaredMethods = viewClass.getDeclaredMethods();
+                for (Method declaredMethod : declaredMethods) {
+                    declaredMethod.setAccessible(true);
+                    Receiver annotation = declaredMethod.getAnnotation(Receiver.class);
+                    if (annotation != null) {
+                        List<ViewReceiverMethodInfo> viewReceiverMethodInfos = receiverMethods.computeIfAbsent(annotation.name(), k -> new LinkedList<>());
+                        ViewReceiverMethodInfo viewReceiverMethodInfo = new ViewReceiverMethodInfo();
+                        viewReceiverMethodInfo.setView(instance);
+                        viewReceiverMethodInfo.setMethod(declaredMethod);
+                        viewReceiverMethodInfo.setReceiverName(annotation.name());
+                        viewReceiverMethodInfo.setWhenHidden(annotation.whenHidden());
+                        viewReceiverMethodInfos.add(viewReceiverMethodInfo);
+                    }
+                }
+            });
+
             return instance;
         } catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
@@ -185,7 +194,7 @@ public abstract class View implements Initializable, EventTarget {
      * @param viewClass view类
      * @return 创建的默认窗体
      */
-    public Stage createWindow(Class<? extends View> viewClass) {
+    protected Stage createWindow(Class<? extends View> viewClass) {
         View view = createView(viewClass);
         Stage stage = new Stage();
         Scene scene = new Scene(view.getRoot());
@@ -199,7 +208,7 @@ public abstract class View implements Initializable, EventTarget {
      * @param message 弹窗展示信息
      * @return 接收用户点击按钮类型
      */
-    public Optional<ButtonType> alert(String message) {
+    protected Optional<ButtonType> alert(String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText(message);
         return alert.showAndWait();
@@ -212,19 +221,183 @@ public abstract class View implements Initializable, EventTarget {
      * @param alertType 弹窗类型
      * @return 接收用户点击按钮类型
      */
-    public Optional<ButtonType> alert(String message, Alert.AlertType alertType) {
+    protected Optional<ButtonType> alert(String message, Alert.AlertType alertType) {
         Alert alert = new Alert(alertType);
         alert.setContentText(message);
         return alert.showAndWait();
     }
+
+    private final long NOT_AUTO_CLOSE = -1;
+    private static final long DEFAULT_DELAY = 4500;
+
+    /**
+     * 显示一则默认类型的通知， 用户手动关闭
+     *
+     * @param message 通知信息
+     */
+    protected void showNotification(String message) {
+        showNotification(message, Notification.NotificationType.DEFAULT);
+    }
+
+    /**
+     * 显示一则指定类型的通知，用户手动关闭
+     *
+     * @param message 通知信息
+     * @param type    通知类型
+     */
+    protected void showNotification(String message, Notification.NotificationType type) {
+        createNotification(message, type, NOT_AUTO_CLOSE);
+    }
+
+
+    /**
+     * 显示一则指定类型的通知，自动关闭，默认显示一秒
+     *
+     * @param message 通知信息
+     */
+    protected void showNotificationAutoClose(String message) {
+        showNotificationAutoClose(message, Notification.NotificationType.DEFAULT);
+    }
+
+
+    protected void showNotificationAutoClose(String message, Notification.NotificationType type) {
+        showNotificationAutoClose(message, type, DEFAULT_DELAY);
+    }
+
+    /**
+     * 显示一则指定类型的通知，自动关闭，指定显示时间
+     *
+     * @param message      通知信息
+     * @param type         通知类型
+     * @param milliseconds 延迟时间 毫秒
+     */
+    protected void showNotificationAutoClose(String message, Notification.NotificationType type, long milliseconds) {
+        createNotification(message, type, milliseconds);
+
+    }
+
+    /**
+     * 当前视图中的 Notification
+     */
+    private VBox vBox;
+    /**
+     * 包裹 Notification，用于定位 Notification
+     */
+    private Group group;
+
+    private void createNotification(String message, Notification.NotificationType type, long milliseconds) {
+        Parent parent = getRoot();
+        if (!(parent instanceof Pane)) {
+            throw new RuntimeException("当前 view 的 root 节点不是 Pane 的子类");
+        }
+        Pane pane = (Pane) parent;
+
+
+        Notification notification = new Notification(message, type);
+        int padding = 17;
+        if (vBox == null) {
+            vBox = new VBox();
+            vBox.setSpacing(padding);
+            vBox.setPadding(new Insets(padding));
+        }
+
+        vBox.getChildren().add(notification);
+
+        if (group == null) {
+            group = new Group(vBox);
+            group.setManaged(false);
+            Scene scene = getWindow().getScene();
+            group.layoutXProperty().bind(scene.widthProperty().subtract(notification.widthProperty()).subtract(padding));
+            pane.getChildren().add(group);
+        }
+
+        // 手动关闭
+        notification.onClose(() -> vBox.getChildren().remove(notification));
+
+        // 自动关闭
+        if (milliseconds != NOT_AUTO_CLOSE) {
+            schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    Platform.runLater(() -> vBox.getChildren().remove(notification));
+                }
+            }, milliseconds);
+        }
+    }
+
+    private Timer timer;
+
+    private void schedule(TimerTask task, long milliseconds) {
+        if (timer == null) {
+            timer = new Timer(true);
+        }
+        timer.schedule(task, milliseconds);
+    }
+
 
     /**
      * 异步执行任务
      *
      * @param task 任务
      */
-    public void runAsync(Task<?> task) {
+    protected void runAsync(Task<?> task) {
         CompletableFuture.runAsync(task);
+    }
+
+
+    /**
+     * 被 @Receiver 注解注释的方法信息，用于缓存被注释的方法
+     */
+    static class ViewReceiverMethodInfo {
+
+        /**
+         * Receiver 方法所属的视图对象
+         */
+        private View view;
+        /**
+         * Receiver 方法
+         */
+        private Method method;
+        /**
+         * 对应 View 窗体关闭时，是否接受消息
+         */
+        private boolean whenHidden;
+        /**
+         * Receiver 名字
+         */
+        private String receiverName;
+
+        public View getView() {
+            return view;
+        }
+
+        public void setView(View view) {
+            this.view = view;
+        }
+
+        public Method getMethod() {
+            return method;
+        }
+
+        public void setMethod(Method method) {
+            this.method = method;
+        }
+
+        public boolean isWhenHidden() {
+            return whenHidden;
+        }
+
+        public void setWhenHidden(boolean whenHidden) {
+            this.whenHidden = whenHidden;
+        }
+
+        public String getReceiverName() {
+            return receiverName;
+        }
+
+        public void setReceiverName(String receiverName) {
+            this.receiverName = receiverName;
+        }
     }
 }
 
