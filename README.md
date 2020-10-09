@@ -8,7 +8,8 @@ JavaFX 简易框架，Java&JavaFX交流群 623110424。
 <dependency>
     <groupId>xyz.yuelai</groupId>
     <artifactId>easyfx</artifactId>
-<version>1.1.0</version>
+    <version>1.1.0</version>
+</dependency>
     
 <!-- 使用了coding制品库发布maven包，所以设置以下coding的仓库 -->
 <repositories>
