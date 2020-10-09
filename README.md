@@ -52,7 +52,7 @@ JavaFX 简易框架，Java&JavaFX交流群 623110424。
        @Override
        public String fxml() {
            // 绝对路径
-           // return "/xyz/yuelai1/Main.fxml";
+           // return "/xyz/yuelai1/view/Main.fxml";
            
            // 相对路径
            return "Main.fxml";
