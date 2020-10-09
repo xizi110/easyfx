@@ -43,6 +43,7 @@ JavaFX 简易框架，Java&JavaFX交流群 623110424。
 2. 新建一个类，继承`xyz.yuelai.View`类，实现`public String fxml()`方法，此方法指定fxml文件位置。可以指定绝对路径，也可以指定相对路径。
 
    fxml文件路径如图所示
+
    ![fxml文件路径](https://github.com/xizi110/easyfx/blob/1.1.0/image-20201009170359938.png)
 
    ```java
