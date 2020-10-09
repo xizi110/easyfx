@@ -1,0 +1,31 @@
+.notification{
+    -fx-padding: 14px 16px 14px 13px;
+
+    -fx-min-width: 330px;
+    -fx-max-width: 330px;
+    -fx-pref-width: 330px;
+
+    -fx-min-height: 78px;
+    -fx-max-height: -1;
+
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+
+    -fx-border-width: 1px;
+    -fx-border-color: #ebeef5;
+    -fx-border-style: solid;
+
+    -fx-background-color: #fff;
+}
+
+.notification .title{
+    -fx-font-weight: 700;
+    -fx-font-size: 16px;
+    -fx-text-fill: #303133;
+}
+
+.notification .content{
+    -fx-font-size: 14px;
+    -fx-text-fill: #606266;
+    -fx-wrap-text: true;
+}
