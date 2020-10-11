@@ -1,85 +1,97 @@
-.notification {
-    -fx-padding: 14px 16px 14px 13px;
+.message {
+    -fx-padding: 15px 15px 15px 20px;
 
-    -fx-min-width: 330px;
-    -fx-max-width: 330px;
-    -fx-pref-width: 330px;
+    -fx-min-width: 380px;
+    -fx-max-width: 880px;
+    -fx-pref-width: 380px;
 
-    -fx-min-height: 78px;
-    -fx-max-height: -1;
-
-    -fx-background-radius: 8px;
-    -fx-border-radius: 8px;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
 
     -fx-border-width: 1px;
-    -fx-border-color: #ebeef5;
     -fx-border-style: solid;
 
-    -fx-background-color: #fff;
+    -fx-alignment: center-left;
+
     -fx-smooth: true;
 }
 
-.text {
-    -fx-font-smoothing-type: GRAY;
+.message-info {
+    -fx-background-color: #edf2fc;
+    -fx-border-color: #ebeef5;
 }
 
-.title {
-    -fx-font-size: 16px;
-    -fx-text-fill: #303133;
-    -fx-font-family: 'DejaVu Serif', Georgia, "Times New Roman", Times, serif;
-    -fx-font-weight: 700;
-    -fx-start-margin: 0.83em;
-    -fx-end-margin: 0.83em;
-    -fx-font-smoothing-type: antialiased;
+.message-error {
+    -fx-background-color: #fef0f0;
+    -fx-border-color: #fde2e2;
 }
 
-.notification .content {
+.message-warning {
+    -fx-background-color: #fdf6ec;
+    -fx-border-color: #faecd8;
+}
+
+.message-success {
+    -fx-background-color: #f0f9eb;
+    -fx-border-color: #e1f3d8;
+}
+
+.message .text {
     -fx-font-size: 14px;
-    -fx-text-fill: #606266;
     -fx-wrap-text: true;
     -fx-font-family: 'DejaVu Serif', Georgia, "Times New Roman", Times, serif;
+    -fx-font-smoothing-type: GRAY;
     -fx-font-weight: 400;
 }
 
-.icon-type {
+.message-info .text {
+    -fx-text-fill: #909399;
+}
+
+.message-warning .text{
+    -fx-text-fill: #e6a23c;
+}
+
+.message-error .text {
+    -fx-text-fill: #f56c6c;
+}
+
+.message-success .text {
+    -fx-text-fill: #67c23a;
+}
+
+.icon-type{
     -fx-pref-width: 18px;
     -fx-pref-height: 18px;
     -fx-min-height: 18px;
     -fx-min-width: 18px;
 }
 
-.notification-info .icon-type {
+.message-info .icon-type{
     -fx-shape: "M512 64q190.016 4.992 316.512 131.488T960 512q-4.992 190.016-131.488 316.512T512 960q-190.016-4.992-316.512-131.488T64 512q4.992-190.016 131.488-316.512T512 64z m67.008 275.008q26.016 0 43.008-15.488t16.992-41.504-16.992-41.504-42.496-15.488-42.496 15.488-16.992 41.504 16.992 41.504 42.016 15.488z m12 360q0-6.016 0.992-16t0-19.008l-52.992 60.992q-8 8.992-16.512 14.016t-14.496 3.008q-8.992-4-8-14.016l88-276.992q4.992-28-8.992-48t-44.992-24q-35.008 0.992-76.512 29.504t-72.512 72.512v15.008q-0.992 10.016 0 19.008l52.992-60.992q8-8.992 16.512-14.016t13.504-3.008q10.016 4.992 7.008 16l-87.008 276q-7.008 24.992 7.008 44.512t48.992 26.496q50.016-0.992 84-28.992t63.008-72z";
     -fx-background-color: #909399;
 }
 
-.notification-warning .icon-type {
+.message-warning .icon-type{
     -fx-shape: "M512 64q190.016 4.992 316.512 131.488T960 512q-4.992 190.016-131.488 316.512T512 960q-190.016-4.992-316.512-131.488T64 512q4.992-190.016 131.488-316.512T512 64z m0 192q-26.016 0-43.008 19.008T453.984 320l23.008 256q2.016 14.016 11.488 22.496t23.488 8.512 23.488-8.512 11.488-22.496l23.008-256q2.016-26.016-15.008-44.992T511.936 256z m0 512q22.016-0.992 36.512-15.008t14.496-36-14.496-36.512T512 665.984t-36.512 14.496-14.496 36.512 14.496 36T512 768z";
     -fx-background-color: #e9ad52;
 }
 
-.notification-error .icon-type {
+.message-error .icon-type{
     -fx-shape: "M512 64q190.016 4.992 316.512 131.488T960 512q-4.992 190.016-131.488 316.512T512 960q-190.016-4.992-316.512-131.488T64 512q4.992-190.016 131.488-316.512T512 64z m0 394.016l-104-104q-12-12-27.488-12t-27.008 11.488-11.488 27.008 12 27.488l104 104-104 104q-12 12-12 27.488t11.488 27.008 27.008 11.488 27.488-12l104-104 104 104q16 15.008 36.992 9.504t26.496-26.496-9.504-36.992L565.984 512l104-104q12-12 12-27.488t-11.488-27.008-27.008-11.488-27.488 12z";
     -fx-background-color: #f56c6c;
 }
 
-.notification-success .icon-type {
+.message-success .icon-type{
     -fx-shape: "M512 64q190.016 4.992 316.512 131.488T960 512q-4.992 190.016-131.488 316.512T512 960q-190.016-4.992-316.512-131.488T64 512q4.992-190.016 131.488-316.512T512 64z m-56 536l-99.008-99.008q-12-11.008-27.488-11.008t-27.008 11.488-11.488 26.496 11.008 27.008l127.008 127.008q11.008 11.008 27.008 11.008t27.008-11.008l263.008-263.008q15.008-15.008 9.504-36.512t-27.008-27.008-36.512 9.504z";
     -fx-background-color: #67c23a;
 }
 
-.notification-error .title{
-    -fx-wrap-text: "错误";
-}
-
 .icon-close {
     -fx-shape: "M764 215.008L512 467.008 260 215.008q-10.016-8.992-22.496-8.992t-22.016 9.504-9.504 22.016 8.992 22.496l252 252-252 252q-12.992 12.992-8.512 31.008t22.016 22.496 31.488-8.512l252-252 252 252q10.016 8.992 22.496 8.992t22.016-9.504 9.504-22.016-8.992-22.496L556.992 512l252-252q12.992-12.992 8.512-31.008t-22.496-22.496-31.008 8.512z";
-    -fx-background-color: #909399;
-    -fx-pref-height: 10px;
-    -fx-pref-width: 10px;
-    -fx-min-width: 10px;
-    -fx-min-height: 10px;
-}
-.icon-close:hover {
-    -fx-background-color: #606266;
+    -fx-background-color: #c0c4cc;
+    -fx-pref-height: 10;
+    -fx-pref-width: 10;
+    -fx-min-width: 10;
+    -fx-min-height: 10;
 }

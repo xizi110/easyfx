@@ -18,6 +18,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import xyz.yuelai.control.Message;
 import xyz.yuelai.control.Notification;
 
 import java.io.IOException;
@@ -35,7 +36,7 @@ import java.util.concurrent.CompletableFuture;
  * 所有 view 的父类。创建 view 对象需要用 {@link #createView(Class)} 方法创建，
  * 否则使用 new ViewImpl() 创建的 view 对象，不能被 View 管理
  */
-@SuppressWarnings("unused")
+@SuppressWarnings("all")
 public abstract class View implements Initializable, EventTarget {
 
     /**
@@ -227,8 +228,46 @@ public abstract class View implements Initializable, EventTarget {
         return alert.showAndWait();
     }
 
-    private final long NOT_AUTO_CLOSE = -1;
-    private static final long DEFAULT_DELAY = 4500;
+    /**
+     * 显示一则默认类型默认延迟的消息
+     *
+     * @param message 通知信息
+     */
+    protected void showMessage(String message) {
+        showMessage(message, Message.Type.INFO);
+    }
+
+    /**
+     * 显示一则指定类型默认延迟的消息
+     *
+     * @param message 通知信息
+     */
+    protected void showMessage(String message, Message.Type type) {
+        showMessage(message, type, Message.DEFAULT_DELAY);
+    }
+
+    /**
+     * 显示一则默认类型指定延迟的消息
+     *
+     * @param message 通知信息
+     */
+    protected void showMessage(String message, long delay) {
+        showMessage(message, Message.Type.INFO, delay);
+    }
+
+    /**
+     * 显示一则指定类型指定延迟的消息
+     *
+     * @param message 通知信息
+     */
+    protected void showMessage(String message, Message.Type type, long delay) {
+        Parent root = getRoot();
+        if (!(root instanceof Pane)) {
+            System.err.println("owner 必须是 Pane 或其子类");
+            return;
+        }
+        Message.show((Pane)root, message, type, delay);
+    }
 
     /**
      * 显示一则默认类型的通知， 用户手动关闭
@@ -236,7 +275,7 @@ public abstract class View implements Initializable, EventTarget {
      * @param message 通知信息
      */
     protected void showNotification(String message) {
-        showNotification(message, Notification.NotificationType.DEFAULT);
+        showNotification(message, Notification.Type.INFO);
     }
 
     /**
@@ -245,10 +284,9 @@ public abstract class View implements Initializable, EventTarget {
      * @param message 通知信息
      * @param type    通知类型
      */
-    protected void showNotification(String message, Notification.NotificationType type) {
-        createNotification(message, type, NOT_AUTO_CLOSE);
+    protected void showNotification(String message, Notification.Type type) {
+        showNotification(message, type, 0);
     }
-
 
     /**
      * 显示一则指定类型的通知，自动关闭，默认显示一秒
@@ -256,12 +294,11 @@ public abstract class View implements Initializable, EventTarget {
      * @param message 通知信息
      */
     protected void showNotificationAutoClose(String message) {
-        showNotificationAutoClose(message, Notification.NotificationType.DEFAULT);
+        showNotificationAutoClose(message, Notification.Type.INFO);
     }
 
-
-    protected void showNotificationAutoClose(String message, Notification.NotificationType type) {
-        showNotificationAutoClose(message, type, DEFAULT_DELAY);
+    protected void showNotificationAutoClose(String message, Notification.Type type) {
+        showNotification(message, type, Notification.DEFAULT_DELAY);
     }
 
     /**
@@ -271,69 +308,14 @@ public abstract class View implements Initializable, EventTarget {
      * @param type         通知类型
      * @param milliseconds 延迟时间 毫秒
      */
-    protected void showNotificationAutoClose(String message, Notification.NotificationType type, long milliseconds) {
-        createNotification(message, type, milliseconds);
-
+    protected void showNotification(String message, Notification.Type type, long milliseconds) {
+        Parent root = getRoot();
+        if (!(root instanceof Pane)) {
+            System.err.println("owner 必须是 Pane 或其子类");
+            return;
+        }
+        Notification.showAutoClose((Pane)root, message, type, milliseconds);
     }
-
-    /**
-     * 当前视图中的 Notification
-     */
-    private VBox vBox;
-    /**
-     * 包裹 Notification，用于定位 Notification
-     */
-    private Group group;
-
-    private void createNotification(String message, Notification.NotificationType type, long milliseconds) {
-        Parent parent = getRoot();
-        if (!(parent instanceof Pane)) {
-            throw new RuntimeException("当前 view 的 root 节点不是 Pane 的子类");
-        }
-        Pane pane = (Pane) parent;
-
-
-        Notification notification = new Notification(message, type);
-        int padding = 17;
-        if (vBox == null) {
-            vBox = new VBox();
-            vBox.setSpacing(padding);
-            vBox.setPadding(new Insets(padding));
-        }
-
-        vBox.getChildren().add(notification);
-
-        if (group == null) {
-            group = new Group(vBox);
-            group.setManaged(false);
-            Scene scene = getWindow().getScene();
-            group.layoutXProperty().bind(scene.widthProperty().subtract(notification.widthProperty()).subtract(padding));
-            pane.getChildren().add(group);
-        }
-
-        // 手动关闭
-        notification.onClose(() -> vBox.getChildren().remove(notification));
-
-        // 自动关闭
-        if (milliseconds != NOT_AUTO_CLOSE) {
-            schedule(new TimerTask() {
-                @Override
-                public void run() {
-                    Platform.runLater(() -> vBox.getChildren().remove(notification));
-                }
-            }, milliseconds);
-        }
-    }
-
-    private Timer timer;
-
-    private void schedule(TimerTask task, long milliseconds) {
-        if (timer == null) {
-            timer = new Timer(true);
-        }
-        timer.schedule(task, milliseconds);
-    }
-
 
     /**
      * 异步执行任务
@@ -344,11 +326,10 @@ public abstract class View implements Initializable, EventTarget {
         CompletableFuture.runAsync(task);
     }
 
-
     /**
      * 被 @Receiver 注解注释的方法信息，用于缓存被注释的方法
      */
-    static class ViewReceiverMethodInfo {
+    private static class ViewReceiverMethodInfo {
 
         /**
          * Receiver 方法所属的视图对象
@@ -367,27 +348,27 @@ public abstract class View implements Initializable, EventTarget {
          */
         private String receiverName;
 
-        public View getView() {
+        private View getView() {
             return view;
         }
 
-        public void setView(View view) {
+        private void setView(View view) {
             this.view = view;
         }
 
-        public Method getMethod() {
+        private Method getMethod() {
             return method;
         }
 
-        public void setMethod(Method method) {
+        private void setMethod(Method method) {
             this.method = method;
         }
 
-        public boolean isWhenHidden() {
+        private boolean isWhenHidden() {
             return whenHidden;
         }
 
-        public void setWhenHidden(boolean whenHidden) {
+        private void setWhenHidden(boolean whenHidden) {
             this.whenHidden = whenHidden;
         }
 
@@ -395,7 +376,7 @@ public abstract class View implements Initializable, EventTarget {
             return receiverName;
         }
 
-        public void setReceiverName(String receiverName) {
+        private void setReceiverName(String receiverName) {
             this.receiverName = receiverName;
         }
     }
