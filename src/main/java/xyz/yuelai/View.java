@@ -60,6 +60,7 @@ public abstract class View implements Initializable, EventTarget {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml()));
             loader.setController(this);
             root = loader.load();
+            root.getStylesheets().add(getClass().getResource("/css/element-ui.css").toExternalForm());
             scene.bind(root.sceneProperty());
             scene.addListener((observable, oldValue, newValue) -> {
                 if (newValue != null) {

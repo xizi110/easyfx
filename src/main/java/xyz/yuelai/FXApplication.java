@@ -18,9 +18,6 @@ public abstract class FXApplication extends Application {
      * @param args         命令行参数
      */
     public static void launch(Class<? extends Preloader> preloadClass, Class<? extends Application> appClass, String... args) {
-        if (preloadClass != null) {
-            System.setProperty("javafx.preloader", preloadClass.getCanonicalName());
-        }
-        LauncherImpl.launchApplication(appClass, args);
+        LauncherImpl.launchApplication(appClass,preloadClass, args);
     }
 }
