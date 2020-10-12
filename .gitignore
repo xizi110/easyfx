@@ -24,3 +24,5 @@ hs_err_pid*
 /target/
 /easyfx.iml
 /.idea/
+/src/main/test/
+/src/main/testResources/
