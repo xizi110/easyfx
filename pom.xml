@@ -30,12 +30,4 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
-    <distributionManagement>
-        <repository>
-            <id>randore-easyfx-easyfx</id>
-            <name>easyfx</name>
-            <url>https://randore-maven.pkg.coding.net/repository/easyfx/easyfx/</url>
-        </repository>
-    </distributionManagement>
 </project>
