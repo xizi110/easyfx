@@ -20,4 +20,8 @@ public abstract class FXApplication extends Application {
     public static void launch(Class<? extends Preloader> preloadClass, Class<? extends Application> appClass, String... args) {
         LauncherImpl.launchApplication(appClass,preloadClass, args);
     }
+
+    public static void setElementStyleEnable(boolean enable){
+        View.ELEMENT_STYLE = enable;
+    }
 }

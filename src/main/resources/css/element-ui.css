@@ -1,7 +1,8 @@
 .root {
     -fx-background-color: #fff;
 }
-.text{
+
+.text {
     -fx-font-smoothing-type: GRAY;
 }
 
@@ -234,7 +235,7 @@
     -fx-border-color: #409eff;
 }
 
-.radio-button:selected > .radio ,
+.radio-button:selected > .radio,
 .check-box:selected > .box {
     -fx-background-color: #409eff;
     -fx-border-color: #409eff;
@@ -323,16 +324,14 @@
     -fx-background-radius: 3px;
     -fx-padding: 20px;
     -fx-font-size: 14px;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0.0, 0, 2);
+}
+
+.table-view:hover {
+    -fx-effect: dropshadow(gaussian, rgba(200, 200, 200, 0.5), 1, 1, 0, 1);
 }
 
 .table-view:focused {
     -fx-background-insets: 0;
-}
-
-.table-view .table-cell {
-    -fx-border-color: #f5f7fa;
-    -fx-border-width: 0;
 }
 
 .table-view .column-header .label {
@@ -345,10 +344,9 @@
 
 .table-view .table-cell {
     -fx-text-fill: #606266;
-    -fx-padding: 12px 0;
-}
-
-.table-view .table-row-cell {
+    -fx-padding: 15px 10px;
+    -fx-border-color: #f5f7fa;
+    -fx-border-width: 0;
 }
 
 .table-view .table-row-cell:odd {
@@ -357,9 +355,56 @@
 
 .table-view .table-row-cell:even {
     -fx-background-color: #fafafa;
+    -fx-border-color: #ebeef5;
+    -fx-border-width: 1px 0;
 }
 
 .table-view .table-row-cell:hover {
     -fx-background-color: #f5f7fa;
+}
 
+/* Progress */
+.progress-bar {
+    -fx-pref-height: 6px;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: #409eff;
+    -fx-background-insets: 0;
+    -fx-background-radius: 100px;
+    -fx-border-radius: 100px;
+}
+
+.progress-bar > .track {
+    -fx-background-color: #ebeef5;
+    -fx-background-radius: 100px;
+    -fx-border-radius: 100px;
+}
+
+.progress-bar-exception > .bar {
+    -fx-background-color: #f56c6c;
+}
+
+.progress-bar-warning > .bar {
+    -fx-background-color: #e6a23c;
+}
+
+.progress-bar-success > .bar {
+    -fx-background-color: #67c23a;
+}
+
+.progress-indicator {
+    -fx-progress-color: #409eff;
+}
+
+.progress-indicator-success {
+    -fx-progress-color: #67c23a;
+}
+
+.progress-indicator-warning {
+    -fx-progress-color: #e6a23c;
+}
+
+.progress-indicator-exception {
+    -fx-progress-color: #f56c6c;
 }

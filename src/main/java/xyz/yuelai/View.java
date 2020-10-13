@@ -44,6 +44,8 @@ public abstract class View implements Initializable, EventTarget {
      */
     private Parent root;
 
+    static boolean ELEMENT_STYLE = false;
+
     private ObjectProperty<Scene> scene = new SimpleObjectProperty<>();
 
     /**
@@ -60,10 +62,12 @@ public abstract class View implements Initializable, EventTarget {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml()));
             loader.setController(this);
             root = loader.load();
-            root.getStylesheets().add(getClass().getResource("/css/element-ui.css").toExternalForm());
             scene.bind(root.sceneProperty());
             scene.addListener((observable, oldValue, newValue) -> {
                 if (newValue != null) {
+                    if (ELEMENT_STYLE) {
+                        root.getStylesheets().add(getClass().getResource("/css/element-ui.css").toExternalForm());
+                    }
                     newValue.windowProperty().addListener((observable1, oldValue1, newValue1) -> {
                         if (newValue1 != null) {
                             newValue1.setOnHidden(event -> onWindowHidden());
