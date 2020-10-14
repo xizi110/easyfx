@@ -20,6 +20,7 @@
 .ele-slider {
     -jfx-default-thumb: #409eff;
     -jfx-default-track: #CCCCCC;
+    -fx-pref-width: 300px;
 }
 
 .ele-slider .track,

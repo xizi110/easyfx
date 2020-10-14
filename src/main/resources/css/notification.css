@@ -5,8 +5,8 @@
     -fx-max-width: 330px;
     -fx-pref-width: 330px;
 
-    -fx-min-height: 78px;
-    -fx-max-height: -1;
+    /*-fx-min-height: 78px;*/
+    /*-fx-max-height: -1;*/
 
     -fx-background-radius: 8px;
     -fx-border-radius: 8px;
