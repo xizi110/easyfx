@@ -345,7 +345,10 @@
 .table-view .column-header {
     -fx-background-color: #fff;
 }
+.table-view .table-column .label{
+    -fx-padding: 15px 7.7px;
 
+}
 .table-view .table-cell {
     -fx-text-fill: #606266;
     -fx-padding: 15px 10px;
@@ -365,6 +368,15 @@
 
 .table-view .table-row-cell:hover {
     -fx-background-color: #f5f7fa;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: #fff;
+}
+
+.table-view .table-column .label,
+.table-view .table-column {
+    -fx-alignment: center-left;
 }
 
 /* Progress */
@@ -491,4 +503,23 @@
 .date-picker-popup > * > .previous-month,
 .date-picker-popup > * > .next-month {
     -fx-text-fill: #c0c4cc;
+}
+
+/* ScrollBar */
+.scroll-bar:vertical{
+    -fx-background-color: transparent;
+    -fx-pref-width: 10px;
+}
+.scroll-bar:vertical > .thumb {
+    -fx-background-color: #d7d7d7;
+    -fx-padding: 30px;
+}
+.scroll-bar:vertical > .thumb:pressed,
+.scroll-bar:vertical > .thumb:hover{
+    -fx-background-color: #b3b3b3;
+}
+.scroll-bar:vertical > .increment-button >.increment-arrow,
+.scroll-bar:vertical > .decrement-button > .decrement-arrow{
+    -fx-shape: "";
+    -fx-padding: 0;
 }
