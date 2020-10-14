@@ -44,7 +44,7 @@ JavaFX 简易框架，Java&JavaFX交流群 623110424。
 
    fxml文件路径如图所示
 
-   ![fxml文件路径](https://github.com/xizi110/easyfx/blob/1.1.0/image-20201009170359938.png)
+   ![fxml文件路径](image-20201009170359938.png)
 
    ```java
    public class MainView extends View {
@@ -75,7 +75,7 @@ JavaFX 简易框架，Java&JavaFX交流群 623110424。
    ```
 
 4. 启动程序
-   ![image-20201009170622248](https://github.com/xizi110/easyfx/blob/1.1.0/image-20201009170622248.png)
+   ![image-20201009170622248](image-20201009170622248.png)
 
 ## View类中的简便方法
 
