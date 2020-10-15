@@ -270,7 +270,6 @@
 }
 
 
-
 .combo-box > .list-cell {
     -fx-text-fill: #606266;
     -fx-prompt-text-fill: #b4b4b4;
@@ -284,6 +283,9 @@
 .combo-box-popup > .list-view {
     -fx-background-color: #fff;
     -fx-border-color: #e4e7ed;
+    -fx-max-height: 274px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
 }
 
 .combo-box-popup > .list-view .list-cell {
@@ -345,10 +347,12 @@
 .table-view .column-header {
     -fx-background-color: #fff;
 }
-.table-view .table-column .label{
+
+.table-view .table-column .label {
     -fx-padding: 15px 7.7px;
 
 }
+
 .table-view .table-cell {
     -fx-text-fill: #606266;
     -fx-padding: 15px 10px;
@@ -370,7 +374,7 @@
     -fx-background-color: #f5f7fa;
 }
 
-.table-view .column-header-background{
+.table-view .column-header-background {
     -fx-background-color: #fff;
 }
 
@@ -447,7 +451,7 @@
     -fx-border-color: #dcdfe6;
 }
 
-.date-picker > .arrow-button > .arrow{
+.date-picker > .arrow-button > .arrow {
     -fx-padding: 7px;
     -fx-background-color: #c0c4cc;
 }
@@ -466,6 +470,9 @@
 .date-picker-popup {
     -fx-cursor: hand;
     -fx-padding: 10px;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-border-color: #fff;
 }
 
 .date-picker-popup > * > .date-cell,
@@ -506,20 +513,23 @@
 }
 
 /* ScrollBar */
-.scroll-bar:vertical{
+.scroll-bar:vertical {
     -fx-background-color: transparent;
     -fx-pref-width: 10px;
 }
+
 .scroll-bar:vertical > .thumb {
     -fx-background-color: #d7d7d7;
     -fx-padding: 30px;
 }
+
 .scroll-bar:vertical > .thumb:pressed,
-.scroll-bar:vertical > .thumb:hover{
+.scroll-bar:vertical > .thumb:hover {
     -fx-background-color: #b3b3b3;
 }
-.scroll-bar:vertical > .increment-button >.increment-arrow,
-.scroll-bar:vertical > .decrement-button > .decrement-arrow{
+
+.scroll-bar:vertical > .increment-button > .increment-arrow,
+.scroll-bar:vertical > .decrement-button > .decrement-arrow {
     -fx-shape: "";
     -fx-padding: 0;
 }
