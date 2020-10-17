@@ -17,6 +17,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.stage.Window;
 import xyz.yuelai.control.Message;
 import xyz.yuelai.control.Notification;
@@ -214,10 +215,8 @@ public abstract class View implements Initializable, EventTarget {
      * @param message 弹窗展示信息
      * @return 接收用户点击按钮类型
      */
-    protected Optional<ButtonType> alert(String message) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText(message);
-        return alert.showAndWait();
+    protected Optional<ButtonType> alert(String message, ButtonType... buttonTypes) {
+        return alert(message, Alert.AlertType.WARNING, buttonTypes);
     }
 
     /**
@@ -227,9 +226,18 @@ public abstract class View implements Initializable, EventTarget {
      * @param alertType 弹窗类型
      * @return 接收用户点击按钮类型
      */
-    protected Optional<ButtonType> alert(String message, Alert.AlertType alertType) {
+    protected Optional<ButtonType> alert(String message, Alert.AlertType alertType, ButtonType... buttonTypes) {
         Alert alert = new Alert(alertType);
+        alert.initStyle(StageStyle.TRANSPARENT);
+        Scene scene = alert.getDialogPane().getScene();
+        scene.setFill(null);
+        alert.getButtonTypes().addAll(buttonTypes);
+        alert.initOwner(getWindow());
         alert.setContentText(message);
+        if (ELEMENT_STYLE) {
+            String s = getClass().getResource("/css/element-ui.css").toExternalForm();
+            alert.getDialogPane().getStylesheets().add(s);
+        }
         return alert.showAndWait();
     }
 
@@ -271,7 +279,7 @@ public abstract class View implements Initializable, EventTarget {
             System.err.println("owner 必须是 Pane 或其子类");
             return;
         }
-        Message.show((Pane)root, message, type, delay);
+        Message.show((Pane) root, message, type, delay);
     }
 
     /**
@@ -319,7 +327,7 @@ public abstract class View implements Initializable, EventTarget {
             System.err.println("owner 必须是 Pane 或其子类");
             return;
         }
-        Notification.showAutoClose((Pane)root, message, type, milliseconds);
+        Notification.showAutoClose((Pane) root, message, type, milliseconds);
     }
 
     /**
