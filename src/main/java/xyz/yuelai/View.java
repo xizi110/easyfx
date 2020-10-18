@@ -67,8 +67,10 @@ public abstract class View implements Initializable, EventTarget {
             scene.addListener((observable, oldValue, newValue) -> {
                 if (newValue != null) {
                     if (ELEMENT_STYLE) {
-                        root.getStylesheets().add(getClass().getResource("/css/element-ui.css").toExternalForm());
+                        newValue.getStylesheets().add(getClass().getResource("/css/element-ui.css").toExternalForm());
                     }
+                    newValue.getStylesheets().add(getClass().getResource("/css/icon.css").toExternalForm());
+
                     newValue.windowProperty().addListener((observable1, oldValue1, newValue1) -> {
                         if (newValue1 != null) {
                             newValue1.setOnHidden(event -> onWindowHidden());

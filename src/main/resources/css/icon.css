@@ -1,0 +1,2246 @@
+@font-face {
+    font-family: 'element';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/element-icons.ttf') format('truetype');
+}
+
+.el-icon-ice-cream-round {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6a0";
+}
+
+.el-icon-ice-cream-square {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6a3";
+}
+
+.el-icon-lollipop {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6a4"
+}
+
+.el-icon-potato-strips {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6a5"
+}
+
+.el-icon-milk-tea {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6a6"
+}
+
+.el-icon-ice-drink {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6a7"
+}
+
+.el-icon-ice-tea {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6a9"
+}
+
+.el-icon-coffee {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6aa"
+}
+
+.el-icon-orange {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6ab"
+}
+
+.el-icon-pear {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6ac"
+}
+
+.el-icon-apple {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6ad"
+}
+
+.el-icon-cherry {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6ae"
+}
+
+.el-icon-watermelon {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6af"
+}
+
+.el-icon-grape {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6b0"
+}
+
+.el-icon-refrigerator {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6b1"
+}
+
+.el-icon-goblet-square-full {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6b2"
+}
+
+.el-icon-goblet-square {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6b3"
+}
+
+.el-icon-goblet-full {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6b4"
+}
+
+.el-icon-goblet {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6b5"
+}
+
+.el-icon-cold-drink {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6b6"
+}
+
+.el-icon-coffee-cup {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6b8"
+}
+
+.el-icon-water-cup {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6b9"
+}
+
+.el-icon-hot-water {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6ba"
+}
+
+.el-icon-ice-cream {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6bb"
+}
+
+.el-icon-dessert {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6bc"
+}
+
+.el-icon-sugar {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6bd"
+}
+
+.el-icon-tableware {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6be"
+}
+
+.el-icon-burger {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6bf"
+}
+
+.el-icon-knife-fork {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6c1"
+}
+
+.el-icon-fork-spoon {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6c2"
+}
+
+.el-icon-chicken {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6c3"
+}
+
+.el-icon-food {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6c4"
+}
+
+.el-icon-dish-1 {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6c5"
+}
+
+.el-icon-dish {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6c6"
+}
+
+.el-icon-moon-night {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6ee"
+}
+
+.el-icon-moon {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6f0"
+}
+
+.el-icon-cloudy-and-sunny {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6f1"
+}
+
+.el-icon-partly-cloudy {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6f2"
+}
+
+.el-icon-cloudy {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6f3"
+}
+
+.el-icon-sunny {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6f6"
+}
+
+.el-icon-sunset {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6f7"
+}
+
+.el-icon-sunrise-1 {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6f8"
+}
+
+.el-icon-sunrise {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6f9"
+}
+
+.el-icon-heavy-rain {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6fa"
+}
+
+.el-icon-lightning {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6fb"
+}
+
+.el-icon-light-rain {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6fc"
+}
+
+.el-icon-wind-power {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6fd"
+}
+
+.el-icon-baseball {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue712"
+}
+
+.el-icon-soccer {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue713"
+}
+
+.el-icon-football {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue715"
+}
+
+.el-icon-basketball {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue716"
+}
+
+.el-icon-ship {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue73f"
+}
+
+.el-icon-truck {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue740"
+}
+
+.el-icon-bicycle {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue741"
+}
+
+.el-icon-mobile-phone {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6d3"
+}
+
+.el-icon-service {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6d4"
+}
+
+.el-icon-key {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6e2"
+}
+
+.el-icon-unlock {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6e4"
+}
+
+.el-icon-lock {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6e5"
+}
+
+.el-icon-watch {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6fe"
+}
+
+.el-icon-watch-1 {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6ff"
+}
+
+.el-icon-timer {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue702"
+}
+
+.el-icon-alarm-clock {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue703"
+}
+
+.el-icon-map-location {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue704"
+}
+
+.el-icon-delete-location {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue705"
+}
+
+.el-icon-add-location {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue706"
+}
+
+.el-icon-location-information {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue707"
+}
+
+.el-icon-location-outline {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue708"
+}
+
+.el-icon-location {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue79e"
+}
+
+.el-icon-place {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue709"
+}
+
+.el-icon-discover {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue70a"
+}
+
+.el-icon-first-aid-kit {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue70b"
+}
+
+.el-icon-trophy-1 {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue70c"
+}
+
+.el-icon-trophy {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue70d"
+}
+
+.el-icon-medal {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue70e"
+}
+
+.el-icon-medal-1 {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue70f"
+}
+
+.el-icon-stopwatch {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue710"
+}
+
+.el-icon-mic {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue711"
+}
+
+.el-icon-copy-document {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue718"
+}
+
+.el-icon-full-screen {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue719"
+}
+
+.el-icon-switch-button {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue71b"
+}
+
+.el-icon-aim {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue71c"
+}
+
+.el-icon-crop {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue71d"
+}
+
+.el-icon-odometer {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue71e"
+}
+
+.el-icon-time {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue71f"
+}
+
+.el-icon-bangzhu {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue724"
+}
+
+.el-icon-close-notification {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue726"
+}
+
+.el-icon-microphone {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue727"
+}
+
+.el-icon-turn-off-microphone {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue728"
+}
+
+.el-icon-position {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue729"
+}
+
+.el-icon-postcard {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue72a"
+}
+
+.el-icon-message {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue72b"
+}
+
+.el-icon-chat-line-square {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue72d"
+}
+
+.el-icon-chat-dot-square {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue72e"
+}
+
+.el-icon-chat-dot-round {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue72f"
+}
+
+.el-icon-chat-square {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue730"
+}
+
+.el-icon-chat-line-round {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue731"
+}
+
+.el-icon-chat-round {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue732"
+}
+
+.el-icon-set-up {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue733"
+}
+
+.el-icon-turn-off {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue734"
+}
+
+.el-icon-open {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue735"
+}
+
+.el-icon-connection {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue736"
+}
+
+.el-icon-link {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue737"
+}
+
+.el-icon-cpu {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue738"
+}
+
+.el-icon-thumb {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue739"
+}
+
+.el-icon-female {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue73a"
+}
+
+.el-icon-male {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue73b"
+}
+
+.el-icon-guide {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue73c"
+}
+
+.el-icon-news {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue73e"
+}
+
+.el-icon-price-tag {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue744"
+}
+
+.el-icon-discount {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue745"
+}
+
+.el-icon-wallet {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue747"
+}
+
+.el-icon-coin {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue748"
+}
+
+.el-icon-money {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue749"
+}
+
+.el-icon-bank-card {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue74a"
+}
+
+.el-icon-box {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue74b"
+}
+
+.el-icon-present {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue74c"
+}
+
+.el-icon-sell {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6d5"
+}
+
+.el-icon-sold-out {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6d6"
+}
+
+.el-icon-shopping-bag-2 {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue74d"
+}
+
+.el-icon-shopping-bag-1 {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue74e"
+}
+
+.el-icon-shopping-cart-2 {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue74f"
+}
+
+.el-icon-shopping-cart-1 {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue750"
+}
+
+.el-icon-shopping-cart-full {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue751"
+}
+
+.el-icon-smoking {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue752"
+}
+
+.el-icon-no-smoking {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue753"
+}
+
+.el-icon-house {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue754"
+}
+
+.el-icon-table-lamp {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue755"
+}
+
+.el-icon-school {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue756"
+}
+
+.el-icon-office-building {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue757"
+}
+
+.el-icon-toilet-paper {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue758"
+}
+
+.el-icon-notebook-2 {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue759"
+}
+
+.el-icon-notebook-1 {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue75a"
+}
+
+.el-icon-files {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue75b"
+}
+
+.el-icon-collection {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue75c"
+}
+
+.el-icon-receiving {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue75d"
+}
+
+.el-icon-suitcase-1 {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue760"
+}
+
+.el-icon-suitcase {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue761"
+}
+
+.el-icon-film {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue763"
+}
+
+.el-icon-collection-tag {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue765"
+}
+
+.el-icon-data-analysis {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue766"
+}
+
+.el-icon-pie-chart {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue767"
+}
+
+.el-icon-data-board {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue768"
+}
+
+.el-icon-data-line {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue76d"
+}
+
+.el-icon-reading {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue769"
+}
+
+.el-icon-magic-stick {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue76a"
+}
+
+.el-icon-coordinate {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue76b"
+}
+
+.el-icon-mouse {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue76c"
+}
+
+.el-icon-brush {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue76e"
+}
+
+.el-icon-headset {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue76f"
+}
+
+.el-icon-umbrella {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue770"
+}
+
+.el-icon-scissors {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue771"
+}
+
+.el-icon-mobile {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue773"
+}
+
+.el-icon-attract {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue774"
+}
+
+.el-icon-monitor {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue775"
+}
+
+.el-icon-search {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue778"
+}
+
+.el-icon-takeaway-box {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue77a"
+}
+
+.el-icon-paperclip {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue77d"
+}
+
+.el-icon-printer {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue77e"
+}
+
+.el-icon-document-add {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue782"
+}
+
+.el-icon-document {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue785"
+}
+
+.el-icon-document-checked {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue786"
+}
+
+.el-icon-document-copy {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue787"
+}
+
+.el-icon-document-delete {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue788"
+}
+
+.el-icon-document-remove {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue789"
+}
+
+.el-icon-tickets {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue78b"
+}
+
+.el-icon-folder-checked {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue77f"
+}
+
+.el-icon-folder-delete {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue780"
+}
+
+.el-icon-folder-remove {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue781"
+}
+
+.el-icon-folder-add {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue783"
+}
+
+.el-icon-folder-opened {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue784"
+}
+
+.el-icon-folder {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue78a"
+}
+
+.el-icon-edit-outline {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue764"
+}
+
+.el-icon-edit {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue78c"
+}
+
+.el-icon-date {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue78e"
+}
+
+.el-icon-c-scale-to-original {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7c6"
+}
+
+.el-icon-view {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6ce"
+}
+
+.el-icon-loading {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6cf"
+}
+
+.el-icon-rank {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6d1"
+}
+
+.el-icon-sort-down {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7c4"
+}
+
+.el-icon-sort-up {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7c5"
+}
+
+.el-icon-sort {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6d2"
+}
+
+.el-icon-finished {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6cd"
+}
+
+.el-icon-refresh-left {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6c7"
+}
+
+.el-icon-refresh-right {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6c8"
+}
+
+.el-icon-refresh {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6d0"
+}
+
+.el-icon-video-play {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7c0"
+}
+
+.el-icon-video-pause {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7c1"
+}
+
+.el-icon-d-arrow-right {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6dc"
+}
+
+.el-icon-d-arrow-left {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6dd"
+}
+
+.el-icon-arrow-up {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6e1"
+}
+
+.el-icon-arrow-down {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6df"
+}
+
+.el-icon-arrow-right {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6e0"
+}
+
+.el-icon-arrow-left {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6de"
+}
+
+.el-icon-top-right {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6e7"
+}
+
+.el-icon-top-left {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6e8"
+}
+
+.el-icon-top {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6e6"
+}
+
+.el-icon-bottom {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6eb"
+}
+
+.el-icon-right {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6e9"
+}
+
+.el-icon-back {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6ea"
+}
+
+.el-icon-bottom-right {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6ec"
+}
+
+.el-icon-bottom-left {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6ed"
+}
+
+.el-icon-caret-top {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue78f"
+}
+
+.el-icon-caret-bottom {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue790"
+}
+
+.el-icon-caret-right {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue791"
+}
+
+.el-icon-caret-left {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue792"
+}
+
+.el-icon-d-caret {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue79a"
+}
+
+.el-icon-share {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue793"
+}
+
+.el-icon-menu {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue798"
+}
+
+.el-icon-s-grid {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7a6"
+}
+
+.el-icon-s-check {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7a7"
+}
+
+.el-icon-s-data {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7a8"
+}
+
+.el-icon-s-opportunity {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7aa"
+}
+
+.el-icon-s-custom {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7ab"
+}
+
+.el-icon-s-claim {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7ad"
+}
+
+.el-icon-s-finance {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7ae"
+}
+
+.el-icon-s-comment {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7af"
+}
+
+.el-icon-s-flag {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7b0"
+}
+
+.el-icon-s-marketing {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7b1"
+}
+
+.el-icon-s-shop {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7b4"
+}
+
+.el-icon-s-open {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7b5"
+}
+
+.el-icon-s-management {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7b6"
+}
+
+.el-icon-s-ticket {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7b7"
+}
+
+.el-icon-s-release {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7b8"
+}
+
+.el-icon-s-home {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7b9"
+}
+
+.el-icon-s-promotion {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7ba"
+}
+
+.el-icon-s-operation {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7bb"
+}
+
+.el-icon-s-unfold {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7bc"
+}
+
+.el-icon-s-fold {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7a9"
+}
+
+.el-icon-s-platform {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7bd"
+}
+
+.el-icon-s-order {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7be"
+}
+
+.el-icon-s-cooperation {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7bf"
+}
+
+.el-icon-bell {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue725"
+}
+
+.el-icon-message-solid {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue799"
+}
+
+.el-icon-video-camera {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue772"
+}
+
+.el-icon-video-camera-solid {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue796"
+}
+
+.el-icon-camera {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue779"
+}
+
+.el-icon-camera-solid {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue79b"
+}
+
+.el-icon-download {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue77c"
+}
+
+.el-icon-upload2 {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue77b"
+}
+
+.el-icon-upload {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7c3"
+}
+
+.el-icon-picture-outline-round {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue75f"
+}
+
+.el-icon-picture-outline {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue75e"
+}
+
+.el-icon-picture {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue79f"
+}
+
+.el-icon-close {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6db"
+}
+
+.el-icon-check {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6da"
+}
+
+.el-icon-plus {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6d9"
+}
+
+.el-icon-minus {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6d8"
+}
+
+.el-icon-help {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue73d"
+}
+
+.el-icon-s-help {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7b3"
+}
+
+.el-icon-circle-close {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue78d"
+}
+
+.el-icon-circle-check {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue720"
+}
+
+.el-icon-circle-plus-outline {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue723"
+}
+
+.el-icon-remove-outline {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue722"
+}
+
+.el-icon-zoom-out {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue776"
+}
+
+.el-icon-zoom-in {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue777"
+}
+
+.el-icon-error {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue79d"
+}
+
+.el-icon-success {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue79c"
+}
+
+.el-icon-circle-plus {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7a0"
+}
+
+.el-icon-remove {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7a2"
+}
+
+.el-icon-info {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7a1"
+}
+
+.el-icon-question {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7a4"
+}
+
+.el-icon-warning-outline {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6c9"
+}
+
+.el-icon-warning {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7a3"
+}
+
+.el-icon-goods {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7c2"
+}
+
+.el-icon-s-goods {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7b2"
+}
+
+.el-icon-star-off {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue717"
+}
+
+.el-icon-star-on {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue797"
+}
+
+.el-icon-more-outline {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6cc"
+}
+
+.el-icon-more {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue794"
+}
+
+.el-icon-phone-outline {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6cb"
+}
+
+.el-icon-phone {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue795"
+}
+
+.el-icon-user {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6e3"
+}
+
+.el-icon-user-solid {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7a5"
+}
+
+.el-icon-setting {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6ca"
+}
+
+.el-icon-s-tools {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7ac"
+}
+
+.el-icon-delete {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue6d7"
+}
+
+.el-icon-delete-solid {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7c9"
+}
+
+.el-icon-eleme {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7c7"
+}
+
+.el-icon-platform-eleme {
+    -fx-font-family: element;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: GRAY;
+    -fx-fill: #606266;
+    -fx-icon-code: "\ue7ca"
+}
