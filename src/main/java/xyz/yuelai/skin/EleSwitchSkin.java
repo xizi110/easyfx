@@ -17,7 +17,7 @@ import xyz.yuelai.control.EleSwitch;
  * @author zhong
  * @date 2020-10-30 16:49:00 周五
  */
-public class SwitchSkin extends LabeledSkinBase<EleSwitch> {
+public class EleSwitchSkin extends LabeledSkinBase<EleSwitch> {
 
     private EleSwitch eleSwitch;
     /**
@@ -47,7 +47,7 @@ public class SwitchSkin extends LabeledSkinBase<EleSwitch> {
     private ParallelTransition parallelTransition = new ParallelTransition();
 
 
-    public SwitchSkin(EleSwitch eleSwitch) {
+    public EleSwitchSkin(EleSwitch eleSwitch) {
         super(eleSwitch);
         this.eleSwitch = eleSwitch;
         // 用于变色

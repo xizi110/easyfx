@@ -7,7 +7,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.control.Labeled;
 import javafx.scene.control.Skin;
 import javafx.scene.paint.Color;
-import xyz.yuelai.skin.SwitchSkin;
+import xyz.yuelai.skin.EleSwitchSkin;
 
 /**
  * @author zhong
@@ -27,7 +27,7 @@ public class EleSwitch extends Labeled {
 
     @Override
     protected Skin<?> createDefaultSkin() {
-        return new SwitchSkin(this);
+        return new EleSwitchSkin(this);
     }
 
     /**
