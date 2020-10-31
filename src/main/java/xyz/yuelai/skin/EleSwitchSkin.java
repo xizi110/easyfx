@@ -151,5 +151,6 @@ public class EleSwitchSkin extends LabeledSkinBase<EleSwitch> {
         final double boxWidth = snapSizeX(bottom.prefWidth(-1));
         final double boxHeight = snapSizeY(bottom.prefHeight(-1));
         bottom.resize(boxWidth, boxHeight);
+        circle.setTranslateX(eleSwitch.isActive() ? eleSwitch.getWidth() - circle.getWidth() - 2 : 2);
     }
 }
