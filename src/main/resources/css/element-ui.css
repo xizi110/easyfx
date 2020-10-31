@@ -713,7 +713,8 @@
 .switch {
 }
 
-.switch .switch-mask {
+.switch:disabled .switch-mask {
+    -fx-opacity: 0.5;
 }
 
 .switch .switch-circle{
