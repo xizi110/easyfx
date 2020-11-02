@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import java.lang.String?>
+<HBox maxHeight="-Infinity" maxWidth="880" minHeight="-Infinity" minWidth="380" prefWidth="380"
+      stylesheets="@../css/message.css" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1">
+    <Label styleClass="icon-type" fx:id="iconType">
+        <HBox.margin>
+            <Insets right="10.0"/>
+        </HBox.margin>
+    </Label>
+    <Label maxWidth="1.7976931348623157E308" styleClass="text" fx:id="message" text="这是一条不会自动关闭的消息" wrapText="true"
+           HBox.hgrow="ALWAYS">
+
+    </Label>
+    <Label styleClass="icon-close" fx:id="iconClose" visible="false" managed="false">
+        <HBox.margin>
+            <Insets left="16.0"/>
+            <Insets right="15.0"/>
+        </HBox.margin>
+    </Label>
+    <styleClass>
+        <String fx:value="message"/>
+    </styleClass>
+</HBox>

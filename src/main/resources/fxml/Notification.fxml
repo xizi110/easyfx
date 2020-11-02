@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<HBox maxHeight="-Infinity" maxWidth="880" minHeight="-Infinity" minWidth="380" prefWidth="380"
+      styleClass="notification,notification-info" stylesheets="@../css/notification.css"
+      xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1">
+    <Label fx:id="iconType" styleClass="icon-type">
+        <HBox.margin>
+            <Insets right="10.0"/>
+        </HBox.margin>
+    </Label>
+    <VBox HBox.hgrow="ALWAYS">
+        <Label fx:id="title" styleClass="title">
+        </Label>
+        <HBox>
+            <Label fx:id="content" maxWidth="1.7976931348623157E308" styleClass="content" text="这是一条不会自动关闭的消息"
+                   wrapText="true" HBox.hgrow="ALWAYS">
+                <HBox.margin>
+                    <Insets top="6.0"/>
+                </HBox.margin>
+            </Label>
+        </HBox>
+    </VBox>
+    <Label fx:id="iconClose" styleClass="icon-close">
+        <HBox.margin>
+            <Insets left="16.0"/>
+        </HBox.margin>
+    </Label>
+    <effect>
+        <DropShadow blurType="GAUSSIAN" color="#0000001a" offsetX="2.0" offsetY="3.0"/>
+    </effect>
+</HBox>
