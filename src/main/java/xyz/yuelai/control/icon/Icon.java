@@ -10,6 +10,10 @@ import javafx.scene.text.Text;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+/**
+ * 字体图标类，为ElementUI的图标设计，暂时无法用于其他图标
+ */
 @SuppressWarnings("unused")
 public class Icon extends Text {
 
