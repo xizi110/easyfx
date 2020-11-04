@@ -7,6 +7,27 @@
 }
 
 /*========================button============================*/
+.button-medium{
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.button-small{
+    -fx-font-size: 12px;
+    -fx-padding: 9px 15px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+}
+
+.button-mini{
+    -fx-font-size: 12px;
+    -fx-padding: 7px 15px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+}
+
 /* default button */
 .button {
     -fx-cursor: hand;
