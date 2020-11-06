@@ -5,6 +5,7 @@ import javafx.css.Styleable;
 import javafx.css.StyleableObjectProperty;
 import javafx.css.StyleableProperty;
 import javafx.css.converter.StringConverter;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
 import java.util.ArrayList;
@@ -16,6 +17,23 @@ import java.util.List;
  */
 @SuppressWarnings("unused")
 public class Icon extends Text {
+
+    public Icon() {
+        this(null);
+    }
+
+    public Icon(String styleClass) {
+       this(styleClass, Color.valueOf("#606266"));
+    }
+
+    public Icon(String styleClass, Color color) {
+        if (styleClass != null && !styleClass.isBlank()) {
+            getStyleClass().add(styleClass);
+        }
+        if (color != null) {
+            setFill(color);
+        }
+    }
 
     @Override
     public List<CssMetaData<? extends Styleable, ?>> getCssMetaData() {
