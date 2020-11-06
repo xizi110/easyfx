@@ -8,14 +8,11 @@ import javafx.event.EventDispatchChain;
 import javafx.event.EventTarget;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
-import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.Window;
@@ -67,10 +64,9 @@ public abstract class View implements Initializable, EventTarget {
             scene.addListener((observable, oldValue, newValue) -> {
                 if (newValue != null) {
                     if (ELEMENT_STYLE) {
-                        newValue.getStylesheets().add(getClass().getResource("/css/element-ui.css").toExternalForm());
+                        newValue.setUserAgentStylesheet(getClass().getResource("/css/element-ui.css").toExternalForm());
                     }
                     newValue.getStylesheets().add(getClass().getResource("/css/icon.css").toExternalForm());
-
                     newValue.windowProperty().addListener((observable1, oldValue1, newValue1) -> {
                         if (newValue1 != null) {
                             newValue1.setOnHidden(event -> onWindowHidden());
