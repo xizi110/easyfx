@@ -8,26 +8,25 @@
 
 /*========================button============================*/
 .button-medium{
-    -fx-font-size: 14px;
-    -fx-padding: 10px 20px;
-    -fx-border-radius: 4px;
-    -fx-background-radius: 4px;
+    -fx-font-size: 14px !important;
+    -fx-padding: 10px 20px !important;
+    -fx-border-radius: 4px !important;
+    -fx-background-radius: 4px !important;
 }
 
 .button-small{
-    -fx-font-size: 12px;
-    -fx-padding: 9px 15px;
-    -fx-border-radius: 3px;
-    -fx-background-radius: 3px;
+    -fx-font-size: 12px !important;
+    -fx-padding: 9px 15px !important;
+    -fx-border-radius: 3px !important;
+    -fx-background-radius: 3px !important;
 }
 
 .button-mini{
     -fx-font-size: 12px;
-    -fx-padding: 7px 15px;
-    -fx-border-radius: 3px;
-    -fx-background-radius: 3px;
+    -fx-padding: 7px 15px !important;
+    -fx-border-radius: 3px !important;
+    -fx-background-radius: 3px !important;
 }
-
 /* default button */
 .button {
     -fx-cursor: hand;
@@ -152,8 +151,6 @@
 }
 
 .button:disabled {
-    /*-fx-text-fill: red;*/
-    -fx-cursor: wait;
 }
 
 /*========================TextInput============================*/
