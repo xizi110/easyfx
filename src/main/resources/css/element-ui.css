@@ -744,14 +744,3 @@
     -fx-border-radius: 100%;
     -fx-background-color: #fff;
 }
-
-.ele-label .text-area,
-.ele-label .text-area * {
-    -fx-padding: 0 ;
-    -fx-background-color: #fff;
-    -fx-background-insets: 0;
-    -fx-border-insets: 0;
-    -fx-border-radius: 0;
-    -fx-background-radius: 0;
-    -fx-border-width: 0;
-}
