@@ -1,5 +1,6 @@
 package xyz.yuelai.skin;
 
+
 import com.sun.javafx.scene.control.LabeledText;
 import com.sun.javafx.util.Utils;
 import javafx.collections.ObservableList;
