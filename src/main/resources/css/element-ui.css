@@ -745,13 +745,19 @@
     -fx-background-color: #fff;
 }
 
-.ele-label .text-area,
-.ele-label .text-area * {
-    -fx-padding: 0 ;
-    -fx-background-color: #fff;
+.ele-label .text-area{
     -fx-background-insets: 0;
     -fx-border-insets: 0;
+    -fx-padding: 0 ;
     -fx-border-radius: 0;
     -fx-background-radius: 0;
     -fx-border-width: 0;
+}
+.ele-label .text-area{
+    -fx-cursor: text;
+}
+.ele-label .text-area > .scroll-pane,
+.ele-label .text-area > .scroll-pane .content{
+    -fx-background-color: transparent;
+
 }

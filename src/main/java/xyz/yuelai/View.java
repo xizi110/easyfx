@@ -16,6 +16,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.Window;
+import javafx.stage.WindowEvent;
 import xyz.yuelai.control.Message;
 import xyz.yuelai.control.Notification;
 
@@ -69,8 +70,10 @@ public abstract class View implements Initializable, EventTarget {
                     newValue.getStylesheets().add(getClass().getResource("/css/icon.css").toExternalForm());
                     newValue.windowProperty().addListener((observable1, oldValue1, newValue1) -> {
                         if (newValue1 != null) {
-                            newValue1.setOnHidden(event -> onWindowHidden());
-                            newValue1.setOnShowing(event -> onWindowShowing());
+                            newValue1.addEventHandler(WindowEvent.WINDOW_HIDING, event -> onWindowHidding());
+                            newValue1.addEventHandler(WindowEvent.WINDOW_HIDDEN, event -> onWindowHidden());
+                            newValue1.addEventHandler(WindowEvent.WINDOW_SHOWING, event -> onWindowShowing());
+                            newValue1.addEventHandler(WindowEvent.WINDOW_SHOWN, event -> onWindowShown());
                         }
                     });
                 }
@@ -133,6 +136,18 @@ public abstract class View implements Initializable, EventTarget {
      * 在窗口关闭之后调用，子类可以覆盖实现
      */
     protected void onWindowHidden() {
+    }
+
+    /**
+     * 在窗口显示之前调用，子类可以覆盖实现
+     */
+    protected void onWindowShown() {
+    }
+
+    /**
+     * 在窗口关闭之后调用，子类可以覆盖实现
+     */
+    protected void onWindowHidding() {
     }
 
     /**
